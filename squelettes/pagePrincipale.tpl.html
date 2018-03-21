@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="{{configuration param=" charset"}}">
+  <meta name="keywords" content="{{configuration param=" meta_keywords"}}">
+  <meta name="description" content="{{configuration param=" meta_description"}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+<body {{parambody}}>
+  <header>
+    <a id="logo" href="index.php"><img src="themes/js/images/js-logo.svg" alt="logo journées scientifiques"/></a>
+    <section id="headerContent">
+      <a id="inscription" href="?wiki=Inscription">S'inscrire aux prochains évènements</a>
+      <article id="textHeader" class="PageHeader" role="main" {{doubleclic}}>
+        {{include page="PageHeader" doubleclic="1"}}
+      </article>
+    <section>
+  </header>
+
+  <!--{WIKINI_PAGE}-->
+
+  <events>
+    {{include page="Evenements" doubleclic="1"}}
+  </events>
+
+  <archives>
+    {{include page="Archives" doubleclic="1"}}
+  </archives>
+
+  <footer>
+    {{include page="PageFooter" doubleclic="1"}}
+  </footer>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      elements = document.querySelectorAll("events div ul li figure a img, archives div ul li figure a img");
+
+      elements.forEach(function(image) {
+        link = image.parentNode.href;
+        text = image.parentNode.parentNode.childNodes[1].innerText;
+        parentLi = image.parentNode.parentNode.parentNode;
+        figure = image.parentNode.parentNode;
+
+        parentLi.style.backgroundImage = 'url("' + image.src + '")';
+        parentLi.style.backgroundSize = 'cover';
+        parentLi.innerHTML = '<a href="' + link + '">' + text + '</a>';
+        figure.remove();
+      });
+
+    });
+  </script>
+  {{linkjavascript}}
+  </body>
+</html>

@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  flex-flow: column;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+#logo {
+  flex-grow: 1;
+  display: block;
+  padding: calc(#{$js-padding} / 2);
+  img {
+    height: calc(#{$chunckMinSize} - #{$js-padding});
+    padding: 0;
+  }
+}
+
+#headerContent {
+  flex-grow: 10;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  padding: $js-padding;
+  justify-content: space-between;
+}
+
+#inscription {
+  font-family: 'Aldo PC';
+  background: $js-yellow;
+  //border-radius: 0.5em;
+  color: $js-purple;
+  font-size: 1.5em;
+  font-weight: $bold;
+  padding: calc(#{$js-padding} / 2) $js-padding;
+  margin-bottom: $js-padding;
+  text-decoration: none;
+  text-align: center;
+}
+
+#inscription:hover {
+  background: $js-purple;
+  color: $js-yellow;
+}
+
+#textHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .include {
+    max-width: $textWidth;
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+
+  }
+}

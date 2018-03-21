@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Aldo PC";
+    src: url("themes/js/fonts/AldoPC.ttf") format("ttf");
+}
+
+html {
+  //color: $mainBlack;
+  //font-family: 'Aldo PC' !important;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div.page {
+  padding: 2em;
+
+  h1 {
+    color: $js-cyan;
+    font-family: 'Aldo PC';
+    font-size: 1.87em;
+    font-weight: $semiBold;
+  }
+
+  h2 {
+    color: $js-green;
+    font-size: 1.75em;
+    font-weight: $semiBold;
+  }
+
+  h3 {
+    color: $js-purple;
+    font-size: 1.66em;
+    font-weight: $semiBold;
+  }
+
+  h4 {
+    //color: $secondOrange;
+    font-size: 1.54em;
+    font-weight: $semiBold;
+  }
+
+  h5 {
+    //color: $mainPurple;
+    font-size: 1.33em;
+    font-weight: $bold;
+  }
+
+  h5 {
+    //color: $secondPink;
+    font-size: 1.2em;
+  }
+
+  b {
+    font-weight: 800;
+  }
+
+  a {
+    color: $js-cyan;
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: $js-green;
+  }
+
+  ul {
+    padding-left: 2em;
+  }
+
+  hr {
+    color: $js-green;
+    border-top: $js-green solid 0.1em;
+    margin: 2em 4em;
+  }
+}

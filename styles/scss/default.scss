@@ -1,0 +1,61 @@
+@import 'vars';
+@import 'text';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+  background: $js-grey;
+}
+
+header {
+  min-height: $chunckMinSize;
+  background-color: $js-green;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-bottom: 4rem;
+
+    div.page {
+        max-width: $textWidth;
+        height: 100%;
+        ul {
+          padding-left: 2em;
+        }
+    }
+}
+
+footer {
+  min-height: $chunckMinSize;
+  background: $js-cyan;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  a, a:visited {
+    color: $js-grey;
+  }
+}
+
+@media (min-width: 960px) {
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@import "header";
+@import "pagePrincipale";
