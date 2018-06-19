@@ -9,23 +9,20 @@
   {{linkrss}}
 </head>
 <body {{parambody}}>
-  <header>
+  <header id="mainHeader">
     <a id="logo" href="index.php"><img src="themes/js/images/js-logo.svg" alt="logo journées scientifiques"/></a>
-    <section id="headerContent">
-      <a id="inscription" href="?wiki=Inscription">S'inscrire aux prochains évènements</a>
-      <article id="textHeader" class="PageHeader" role="main" {{doubleclic}}>
-        {{include page="PageHeader" doubleclic="1"}}
-      </article>
-    <section>
   </header>
+  <p id="headerText">Les journées scientifiques</p>
+
   <section id="main">
     <article id="page" role="main" {{doubleclic}}>
       {WIKINI_PAGE}
     </article>
   </section>
 
-  <footer>
+  <footer id="mainFooter">
     {{include page="PageFooter" doubleclic="1"}}
+    <div id="YesWikiLink">(>^_^)> Galope sous <a href="https://www.yeswiki.net">YesWiki</a> <(^_^<)</div>
   </footer>
   {{linkjavascript}}
 </body>

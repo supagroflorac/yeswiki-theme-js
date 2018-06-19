@@ -10,50 +10,60 @@
 body {
   font-size: 18px;
   background: $js-grey;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
-header {
-  min-height: $chunckMinSize;
-  background-color: $js-green;
+#mainHeader {
+  min-height: $js-strip-min-height;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row no-wrap;
   justify-content: center;
   align-items: center;
 }
 
 #page {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding-bottom: 4rem;
 
-    div.page {
-        max-width: $textWidth;
-        height: 100%;
-        ul {
-          padding-left: 2em;
-        }
+  div.page {
+    background: $js-light-grey;
+    width: calc(100% - #{$js-padding});
+    height: 100%;
+    ul {
+      padding-left: 2em;
     }
+  }
 }
 
-footer {
-  min-height: $chunckMinSize;
+#mainFooter {
+  min-height: $js-strip-min-height;
   background: $js-cyan;
   display: flex;
-  flex-flow: row;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   a, a:visited {
-    color: $js-grey;
+    color: $js-light-grey;
+  }
+
+  #YesWikiLink {
+    font-size: 0.80em;
+    padding: 2em;
   }
 }
 
 @media (min-width: 960px) {
-  header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+  #page {
+    div.page {
+      width: $js-text-width;
+      height: 100%;
+    }
   }
 }
 

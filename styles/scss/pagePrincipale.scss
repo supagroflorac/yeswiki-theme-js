@@ -1,12 +1,49 @@
 events, archives {
-  min-height: $chunckMinSize;
-  display:flex;
+  min-height: $js-strip-min-height;
+  display: flex;
+}
+
+description {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: calc(#{$js-text-width} * 1.5);
+  margin-top: 1em;
+
+  div.include {
+    flex-grow: 3;
+    justify-content: center;
+    font-size: 0.9em;
+    padding: 0 $js-padding;
+
+    ul {
+      margin-left: 2em;
+    }
+  }
+
+  #inscription {
+    flex-grow: 1;
+    font-family: 'Aldo PC';
+    background: $js-cyan;
+    border-radius: 0.2em;
+    color: $js-grey;
+    font-size: 2em;
+    font-weight: $bold;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 calc(#{$js-padding} / 4);
+    padding: calc(#{$js-padding} / 4);
+  }
+
+  #inscription:hover {
+    color: $js-light-grey;
+    //background: $js-light-grey;
+  }
 }
 
 events, archives {
-  //padding: 0 $js-padding;
   width: 100%;
-  background: white;
 
   div.include {
     width: 100%;
@@ -23,20 +60,19 @@ events, archives {
       justify-content: center;
       height: 100%;
       width: 100%;
+      padding: $js-padding calc(#{$js-padding} / 2);
 
       li {
-        background: $js-purple no-repeat;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: $js-light-grey url('../images/ev-magenta.svg') bottom right no-repeat;
+        background-size: 20% 20%;
         list-style: none;
-        color: $js-grey;
         text-align: center;
         font-size: 2em;
-
-        height: calc(#{$chunckMinSize} /2 - #{$js-padding});
-        width: calc(#{$chunckMinSize} /2 - #{$js-padding});
-        margin: $js-padding;
-
+        padding: calc(#{$js-padding} / 2);
+        height: calc(#{$js-strip-min-height} /2 - #{$js-padding});
+        width: calc(#{$js-strip-min-height} /2 - #{$js-padding});
+        margin: calc(#{$js-padding} / 2);
+        font-family: 'Aldo PC';
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -44,8 +80,8 @@ events, archives {
         z-index: 0;
 
         a {
-          color: $js-grey;
-          background-color: rgba(109, 47, 136, 0.5);
+          color: $js-text-color;
+          font-size: 0.8em;
           min-height: 100%;
           min-width: 100%;
           height: auto;
@@ -60,19 +96,16 @@ events, archives {
         }
       }
 
+      li:nth-child(3n + 1) {
+        background: $js-light-grey url('../images/ev-cyan.svg') bottom right no-repeat;
+      }
+
+      li:nth-child(3n + 2) {
+        background: $js-light-grey url('../images/ev-yellow.svg') bottom right no-repeat;
+      }
+
       li:hover {
         transform: scale(1.10);
-
-        figure a {
-          opacity: 0.2;
-        }
-
-        figure {
-          figcaption {
-            background: $js-purple;
-            color: white;
-          }
-        }
       }
     }
   }
@@ -80,20 +113,20 @@ events, archives {
 
 archives {
   width: 100%;
-  background: $js-yellow;
+
 
   div.include ul {
+    padding-top: 0;
     li {
-      font-size: 1em;
-      background: $js-magenta;
-
-      a {
-        color: $js-grey;
-      }
+      font-size: 1.3em;
     }
+  }
+}
 
-    li:hover figure figcaption {
-      background: $js-magenta;
-    }
+@media (min-width: 960px) {
+  description {
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
   }
 }

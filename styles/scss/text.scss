@@ -1,13 +1,14 @@
 @font-face {
     font-family: "Aldo PC";
-    src: url("themes/js/fonts/AldoPC.ttf") format("ttf");
+    src: url("../fonts/AldoPC.woff") format("woff"),
+         url("../fonts/AldoPC.ttf") format("ttf");
 }
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 html {
-  //color: $mainBlack;
-  //font-family: 'Aldo PC' !important;
+  color: $js-text-color;
   font-weight: 500;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 div.page {
@@ -22,12 +23,14 @@ div.page {
 
   h2 {
     color: $js-green;
+    font-family: 'Aldo PC';
     font-size: 1.75em;
     font-weight: $semiBold;
   }
 
   h3 {
     color: $js-purple;
+    font-family: 'Aldo PC';
     font-size: 1.66em;
     font-weight: $semiBold;
   }
