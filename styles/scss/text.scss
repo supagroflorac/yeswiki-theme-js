@@ -58,7 +58,7 @@ div.page {
 
   a {
     color: $js-cyan;
-    text-decoration: underline;
+    text-decoration:  line-throughnone;
   }
 
   a:visited {
@@ -73,5 +73,10 @@ div.page {
     color: $js-green;
     border-top: $js-green solid 0.1em;
     margin: 2em 4em;
+  }
+
+  iframe {
+    display: block;
+    margin: 1em auto;
   }
 }
